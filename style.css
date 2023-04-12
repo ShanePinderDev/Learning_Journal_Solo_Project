@@ -10,6 +10,10 @@ html {
 *:after {
   box-sizing: inherit;
 }
+/* Suggested in code review to prevent the body shrinking too much - better to use a container to wrap all of the content and put min-width on that instead of putting it on the body */
+body {
+  min-width: 400px;
+}
 
 body,
 header,
@@ -75,6 +79,8 @@ body {
 }
 
 .nav-items {
+  /* Suggested in code review to prevent ABOUT ME in particular getting squeezed and jumping to two lines */
+  min-width: 160px;
   font-weight: 600;
   line-height: 1.25;
   font-size: 0.75rem;
@@ -306,6 +312,8 @@ body {
 }
 
 .footer-text {
+  /* min-width added to stop the footer text jumping to two lines on smaller screens */
+  min-width: 160px;
   text-align: center;
   font-weight: 700;
   line-height: 1.08;
